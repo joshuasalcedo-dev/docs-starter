@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: documentation-app:latest
+    container_name: documentation-app
+    ports:
+      - "80:8080"
+    volumes:
+      - ${HOME}/.docs/documentation:/root/.docs/documentation
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker,prod
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

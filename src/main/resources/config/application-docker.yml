@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: Documentation App
+
+  datasource:
+    url: jdbc:h2:file:/root/.docs/documentation/db;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password: password
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+
+server:
+  port: 8888
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+
+logging:
+  level:
+    io.joshuasalcedo: INFO
+    org.springframework.web: INFO
+    org.hibernate: ERROR
+
+vaadin:
+  whitelisted-packages: io.joshuasalcedo.documentation
+  pnpm:
+    enable: true

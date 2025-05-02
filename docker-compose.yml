@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: documentation-app
+    ports:
+      - "8080:8080"
+    volumes:
+      - ${HOME}/.docs/documentation:/root/.docs/documentation
+    restart: unless-stopped
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker

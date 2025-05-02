@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+    --lumo-font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    --lumo-border-radius: 6px;
+    --lumo-primary-color: hsl(214, 90%, 52%);
+    --lumo-primary-color-50pct: hsla(214, 90%, 52%, 0.5);
+    --lumo-primary-color-10pct: hsla(214, 90%, 52%, 0.1);
+    --lumo-shade: hsl(214, 35%, 15%);
+    --lumo-shade-90pct: hsla(214, 35%, 15%, 0.9);
+    --lumo-shade-80pct: hsla(214, 35%, 15%, 0.8);
+    --lumo-shade-70pct: hsla(214, 35%, 15%, 0.7);
+    --lumo-shade-60pct: hsla(214, 35%, 15%, 0.6);
+    --lumo-shade-50pct: hsla(214, 35%, 15%, 0.5);
+    --lumo-shade-40pct: hsla(214, 35%, 15%, 0.4);
+    --lumo-shade-30pct: hsla(214, 35%, 15%, 0.3);
+    --lumo-shade-20pct: hsla(214, 35%, 15%, 0.2);
+    --lumo-shade-10pct: hsla(214, 35%, 15%, 0.1);
+    --lumo-shade-5pct: hsla(214, 35%, 15%, 0.05);
+}
+
+/* Sidebar styling */
+.menu-header {
+    font-weight: bold;
+    color: var(--lumo-primary-color);
+    font-size: 0.9em;
+    padding-left: 0.5em;
+    margin-top: 1em;
+    text-transform: uppercase;
+}
+
+/* Content styling */
+.documentation-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.toolbar {
+    margin-bottom: 1em;
+}
+
+.content {
+    display: flex;
+}
+
+.editing .content {
+    display: flex;
+    gap: 2em;
+}
+
+/* Grid styling */
+.documentation-grid .content-column {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 300px;
+}
+
+/* Documentation view styling */
+.content-container {
+    border: 1px solid var(--lumo-contrast-10pct);
+    border-radius: var(--lumo-border-radius);
+    padding: 1em;
+    background-color: var(--lumo-base-color);
+}
+
+/* Markdown content styling */
+.markdown-content h1 {
+    margin-top: 0.5em;
+    color: var(--lumo-primary-color);
+}
+
+.markdown-content h2 {
+    color: var(--lumo-primary-color-50pct);
+}
+
+.markdown-content pre {
+    background-color: var(--lumo-contrast-5pct);
+    padding: 1em;
+    border-radius: var(--lumo-border-radius);
+    overflow-x: auto;
+}
+
+.markdown-content code {
+    background-color: var(--lumo-contrast-5pct);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.markdown-content blockquote {
+    border-left: 4px solid var(--lumo-primary-color-10pct);
+    margin-left: 0;
+    padding-left: 1em;
+    color: var(--lumo-secondary-text-color);
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.markdown-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+.markdown-content th, .markdown-content td {
+    border: 1px solid var(--lumo-contrast-10pct);
+    padding: 0.5em;
+}
+
+.markdown-content th {
+    background-color: var(--lumo-contrast-5pct);
+}
